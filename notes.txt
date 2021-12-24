@@ -1,0 +1,55 @@
+notes: most of the houses are 1 story 1946 & newer and low density residential areas (also in bldgType)
+- street seems to have no gravel? -> useless?  vs. alley has grvl and pave (gravel alley indicates bigger ranch?)
+- utilities only AllPub -> useless
+
+!!!!all Quality features should keep order!!!!
+
+outliers: Lot Frontage, LotArea, MasVnrArea, BsmtFinSF1, totalBsmtSF, 1stFlSF, GrLivArea, 
+garageArea, woodDeckSF, OpenPorchSF
+
+
+useless features because only one value (verify):
+-street / 
+-utilities
+-condition2
+- roofMatl
+- bsmtFinSF2
+- heating
+- lowQualFinSF
+- enclosedPorch, 3SsnPorch, ScreenPorch, PoolArea (use pool qual as one hot encoded)
+- MiscVal
+
+
+minimal impact (-> build categorical feature in one hot)
+-land slope
+-land contour
+-condition1 (proximity -> build map look at stuff / also neighborhood in AMES CITY)
+-bldgType
+-roofStyle
+-ExterCond
+-bsmtQual, bsmtCond needs to keep encoding order or one hot
+- centralAir
+- electrical
+- BsmtHalfBarth
+- kitchenAbvGr
+- Functionality (also need to keep order if all categories should be kept)
+- GarageQual, GarageCond
+- MiscFeature
+- SaleType
+- SaleCondition
+
+interesting stuff:
+- overallQual (0-10)
+- overallCond (0-10)
+- calculate full SF area
+- calculate price/SF (if possible)
+- GarageYrBlt -> check if garage was build after house was built
+-PAved Drive (duplicaet to alley?)
+- moSold, YrSold (calc deltaTime since first sell)
+- calculate overall porchSF
+- overall house SF
+- overall SF (garage, house, basement, porch)
+- BsmtUnfSF into bool, do we have unfinished basement stuff / or finished into bool 
+- !!! or calculate percentage finished / unfinished
+- bool if remodeled 
+- years after build the remodeled took place
