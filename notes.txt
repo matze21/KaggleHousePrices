@@ -41,6 +41,7 @@ minimal impact (-> build categorical feature in one hot)
 interesting stuff:
 - overallQual (0-10)
 - overallCond (0-10)
+things to try:
 - calculate full SF area
 - calculate price/SF (if possible)
 - GarageYrBlt -> check if garage was build after house was built
@@ -53,3 +54,4 @@ interesting stuff:
 - !!! or calculate percentage finished / unfinished
 - bool if remodeled 
 - years after build the remodeled took place
+- bool if has second floor
