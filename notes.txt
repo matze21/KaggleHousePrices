@@ -45,7 +45,7 @@ things to try:
 - calculate full SF area
 - calculate price/SF (if possible)
 - GarageYrBlt -> check if garage was build after house was built
--PAved Drive (duplicaet to alley?)
+- PAved Drive (duplicaet to alley?)
 - moSold, YrSold (calc deltaTime since first sell)
 - calculate overall porchSF
 - overall house SF
